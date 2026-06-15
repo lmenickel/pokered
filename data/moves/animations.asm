@@ -164,6 +164,27 @@ AttackAnimationPointers:
 	dw SuperFangAnim
 	dw SlashAnim
 	dw SubstituteAnim
+	dw SonicBoomAnim
+	dw PsychicAnim
+	dw HyperBeamAnim
+	dw LovelyKissAnim
+	dw DizzyPunchAnim
+	dw TwineedleAnim
+	dw DizzyPunchAnim
+	dw SlashAnim
+	dw BiteAnim
+	dw PsychicAnim
+	dw PsychicAnim
+	dw FlamethrowerAnim
+	dw HyperBeamAnim
+	dw SpikeCannonAnim
+	dw GustAnim
+	dw HeadbuttAnim
+	dw TailWhipAnim
+	dw IceBeamAnim
+	dw DreamEaterAnim
+	dw PsywaveAnim
+	dw QuickAttackAnim ; EXTREME_SPEED reuses Quick Attack's animation
 	dw StruggleAnim
 	assert_table_length NUM_ATTACKS
 	dw ShowPicAnim

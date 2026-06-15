@@ -179,32 +179,8 @@ StartBattle:
 	jp PrintText
 .notOutOfSafariBalls
 	callfar PrintSafariZoneBattleText
-	ld a, [wEnemyMonSpeed + 1]
-	add a
-	ld b, a ; init b (which is later compared with random value) to (enemy speed % 256) * 2
-	jp c, EnemyRan ; if (enemy speed % 256) > 127, the enemy runs
-	ld a, [wSafariBaitFactor]
-	and a ; is bait factor 0?
-	jr z, .checkEscapeFactor
-; bait factor is not 0
-; divide b by 4 (making the mon less likely to run)
-	srl b
-	srl b
-.checkEscapeFactor
-	ld a, [wSafariEscapeFactor]
-	and a ; is escape factor 0?
-	jr z, .compareWithRandomValue
-; escape factor is not 0
-; multiply b by 2 (making the mon more likely to run)
-	sla b
-	jr nc, .compareWithRandomValue
-; cap b at 255
-	ld b, $ff
-.compareWithRandomValue
-	call Random
-	cp b
-	jr nc, .checkAnyPartyAlive
-	jr EnemyRan ; if b was greater than the random value, the enemy runs
+; Safari Zone Pokémon never flee.
+	jr .checkAnyPartyAlive
 
 .outOfSafariBallsText
 	text_far _OutOfSafariBallsText
@@ -368,15 +344,15 @@ MainInBattleLoop:
 	callfar SwitchEnemyMon
 .noLinkBattle
 	ld a, [wPlayerSelectedMove]
-	cp QUICK_ATTACK
+	call CheckPriorityMove
 	jr nz, .playerDidNotUseQuickAttack
 	ld a, [wEnemySelectedMove]
-	cp QUICK_ATTACK
+	call CheckPriorityMove
 	jr z, .compareSpeed  ; if both used Quick Attack
 	jp .playerMovesFirst ; if player used Quick Attack and enemy didn't
 .playerDidNotUseQuickAttack
 	ld a, [wEnemySelectedMove]
-	cp QUICK_ATTACK
+	call CheckPriorityMove
 	jr z, .enemyMovesFirst ; if enemy used Quick Attack and player didn't
 	ld a, [wPlayerSelectedMove]
 	cp COUNTER
@@ -466,6 +442,16 @@ MainInBattleLoop:
 	call DrawHUDsAndHPBars
 	call CheckNumAttacksLeft
 	jp MainInBattleLoop
+
+CheckPriorityMove:
+; Returns z if the move id in a is a high-priority move that moves first
+; (Quick Attack, Constrict, or Extreme Speed).
+	cp QUICK_ATTACK
+	ret z
+	cp CONSTRICT
+	ret z
+	cp EXTREME_SPEED
+	ret
 
 HandlePoisonBurnLeechSeed:
 	ld hl, wBattleMonHP
@@ -1291,6 +1277,8 @@ EnemySendOut:
 ; don't change wPartyGainExpFlags or wPartyFoughtCurrentEnemyFlags
 EnemySendOutFirstMon:
 	xor a
+	ld [wEnemyBattleStatus3], a ; clear BADLY_POISONED, light screen, reflect, transformed
+	ld [wEnemyToxicCounter], a  ; reset Toxic damage counter on switch
 	ld hl, wEnemyStatsToDouble ; clear enemy statuses
 	ld [hli], a
 	ld [hli], a
@@ -1732,6 +1720,8 @@ SendOutMon:
 	predef LoadMonBackPic
 	xor a
 	ldh [hStartTileID], a
+	ld [wPlayerBattleStatus3], a ; clear BADLY_POISONED, light screen, reflect, transformed
+	ld [wPlayerToxicCounter], a  ; reset Toxic damage counter on switch
 	ld hl, wBattleAndStartSavedMenuItem
 	ld [hli], a
 	ld [hl], a
@@ -3363,13 +3353,8 @@ CheckPlayerStatusConditions:
 	jp .returnToHL
 
 .HeldInPlaceCheck
-	ld a, [wEnemyBattleStatus1]
-	bit USING_TRAPPING_MOVE, a ; is enemy using a multi-turn move like wrap?
-	jp z, .FlinchedCheck
-	ld hl, CantMoveText
-	call PrintText
-	ld hl, ExecutePlayerMoveDone ; player can't move this turn
-	jp .returnToHL
+; Trapping moves like Wrap no longer hold the target in place: it can still act
+; (attack or switch) to break free, instead of losing every turn.
 
 .FlinchedCheck
 	ld hl, wPlayerBattleStatus1
@@ -3828,11 +3813,9 @@ OHKOText:
 ; checks if a traded mon will disobey due to lack of badges
 ; stores whether the mon will use a move in Z flag
 CheckForDisobedience:
+; Pokemon always obey regardless of level, original trainer, or badge count.
 	xor a
 	ld [wMonIsDisobedient], a
-	ld a, [wLinkState]
-	cp LINK_STATE_BATTLING
-	jr nz, .checkIfMonIsTraded
 	ld a, $1
 	and a
 	ret
@@ -4026,6 +4009,17 @@ IgnoredOrdersText:
 	text_far _IgnoredOrdersText
 	text_end
 
+; Returns the damage category (PHYSICAL_MOVE or SPECIAL_MOVE) in a for the move
+; id passed in a. Used to choose Attack/Defense vs Special per move.
+GetMoveCategory:
+	dec a
+	ld c, a
+	ld b, 0
+	ld hl, MoveCategories
+	add hl, bc
+	ld a, [hl]
+	ret
+
 ; sets b, c, d, and e for the CalculateDamage routine in the case of an attack by the player mon
 GetDamageVarsForPlayerAttack:
 	xor a
@@ -4037,9 +4031,10 @@ GetDamageVarsForPlayerAttack:
 	and a
 	ld d, a ; d = move power
 	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wPlayerMoveType]
-	cp SPECIAL ; types >= SPECIAL are all special
-	jr nc, .specialAttack
+	ld a, [wPlayerMoveNum]
+	call GetMoveCategory ; a = move's damage category (independent of type)
+	and a
+	jr nz, .specialAttack ; SPECIAL_MOVE uses Special; PHYSICAL_MOVE uses Attack/Defense
 ; physical attack
 	ld hl, wEnemyMonDefense
 	ld a, [hli]
@@ -4150,9 +4145,10 @@ GetDamageVarsForEnemyAttack:
 	ld d, a ; d = move power
 	and a
 	ret z ; return if move power is zero
-	ld a, [hl] ; a = [wEnemyMoveType]
-	cp SPECIAL ; types >= SPECIAL are all special
-	jr nc, .specialAttack
+	ld a, [wEnemyMoveNum]
+	call GetMoveCategory ; a = move's damage category (independent of type)
+	and a
+	jr nz, .specialAttack ; SPECIAL_MOVE uses Special; PHYSICAL_MOVE uses Attack/Defense
 ; physical attack
 	ld hl, wBattleMonDefense
 	ld a, [hli]
@@ -4504,14 +4500,22 @@ CriticalHitTest:
 	ld c, [hl]                   ; read move id
 	ld a, [de]
 	bit GETTING_PUMPED, a        ; test for focus energy
-	jr nz, .focusEnergyUsed      ; bug: using focus energy causes a shift to the right instead of left,
-	                             ; resulting in 1/4 the usual crit chance
+	jr nz, .focusEnergyUsed
 	sla b                        ; (effective (base speed/2)*2)
 	jr nc, .noFocusEnergyUsed
 	ld b, $ff                    ; cap at 255/256
 	jr .noFocusEnergyUsed
 .focusEnergyUsed
-	srl b
+; Fix: Focus Energy quadruples crit chance (sla b twice = *4) instead of the
+; original `srl b` which incorrectly quartered it.
+	sla b
+	jr nc, .focusEnergyDoubled
+	ld b, $ff
+	jr .noFocusEnergyUsed
+.focusEnergyDoubled
+	sla b
+	jr nc, .noFocusEnergyUsed
+	ld b, $ff
 .noFocusEnergyUsed
 	ld hl, HighCriticalMoves     ; table of high critical hit moves
 .Loop
@@ -5708,13 +5712,8 @@ CheckEnemyStatusConditions:
 	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
 	jp .enemyReturnToHL
 .checkIfTrapped
-	ld a, [wPlayerBattleStatus1]
-	bit USING_TRAPPING_MOVE, a ; is the player using a multi-turn attack like warp
-	jp z, .checkIfFlinched
-	ld hl, CantMoveText
-	call PrintText
-	ld hl, ExecuteEnemyMoveDone ; enemy can't move this turn
-	jp .enemyReturnToHL
+; Trapping moves like Wrap no longer hold the target in place: it can still act
+; (attack or switch) to break free, instead of losing every turn.
 .checkIfFlinched
 	ld hl, wEnemyBattleStatus1
 	bit FLINCHED, [hl] ; check if enemy mon flinched

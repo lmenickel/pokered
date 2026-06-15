@@ -1,9 +1,9 @@
 	db DEX_ELECTRODE ; pokedex id
 
-	db  60,  50,  70, 140,  80
+	db  75,  50,  85, 140,  80
 	;   hp  atk  def  spd  spc
 
-	db ELECTRIC, ELECTRIC ; type
+	db ELECTRIC, STEEL ; type
 	db 60 ; catch rate
 	db 150 ; base exp
 
