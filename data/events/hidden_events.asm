@@ -65,7 +65,6 @@ HiddenEventMaps:
 	hidden_event_map POKEMON_MANSION_3F
 	hidden_event_map ROUTE_23
 	hidden_event_map VICTORY_ROAD_2F
-	hidden_event_map UNUSED_MAP_6F
 	hidden_event_map BILLS_HOUSE
 	hidden_event_map VIRIDIAN_CITY
 	hidden_event_map SAFARI_ZONE_WEST_REST_HOUSE
@@ -478,10 +477,6 @@ DEF ANY_FACING EQU $d0
 	hidden_events_for VICTORY_ROAD_2F
 	hidden_event  5,  2, HiddenItems, ULTRA_BALL
 	hidden_event 26,  7, HiddenItems, FULL_RESTORE
-	db -1 ; end
-
-	hidden_events_for UNUSED_MAP_6F
-	hidden_event 14, 11, HiddenItems, MAX_ELIXER
 	db -1 ; end
 
 	hidden_events_for BILLS_HOUSE

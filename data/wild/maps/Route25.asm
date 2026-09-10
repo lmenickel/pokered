@@ -12,5 +12,15 @@ Route25WildMons:
 	db  9, CHARMANDER
 	end_grass_wildmons
 
-	def_water_wildmons 0 ; encounter rate
+	def_water_wildmons 5 ; encounter rate
+	db 20, DRATINI
+	db 20, KRABBY
+	db 20, TENTACOOL
+	db 20, KRABBY
+	db 20, TENTACOOL
+	db 20, KRABBY
+	db 30, DRAGONAIR
+	db 20, TENTACOOL
+	db 20, KRABBY
+	db 55, DRAGONITE
 	end_water_wildmons

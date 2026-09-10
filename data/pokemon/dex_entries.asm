@@ -30,8 +30,8 @@ PokedexEntryPointers:
 	dw BlastoiseDexEntry
 	dw PinsirDexEntry
 	dw TangelaDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw EspeonDexEntry
+	dw UmbreonDexEntry
 	dw GrowlitheDexEntry
 	dw OnixDexEntry
 	dw FearowDexEntry
@@ -49,26 +49,26 @@ PokedexEntryPointers:
 	dw PsyduckDexEntry
 	dw DrowzeeDexEntry
 	dw GolemDexEntry
-	dw MissingNoDexEntry
+	dw SylveonDexEntry
 	dw MagmarDexEntry
-	dw MissingNoDexEntry
+	dw CrobatDexEntry
 	dw ElectabuzzDexEntry
 	dw MagnetonDexEntry
 	dw KoffingDexEntry
-	dw MissingNoDexEntry
+	dw MarillDexEntry
 	dw MankeyDexEntry
 	dw SeelDexEntry
 	dw DiglettDexEntry
 	dw TaurosDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw AzumarillDexEntry
+	dw SteelixDexEntry
+	dw ScizorDexEntry
 	dw FarfetchdDexEntry
 	dw VenonatDexEntry
 	dw DragoniteDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw HeracrossDexEntry
+	dw SkarmoryDexEntry
+	dw PhanpyDexEntry
 	dw DoduoDexEntry
 	dw PoliwagDexEntry
 	dw JynxDexEntry
@@ -78,8 +78,8 @@ PokedexEntryPointers:
 	dw DittoDexEntry
 	dw MeowthDexEntry
 	dw KrabbyDexEntry
-	dw MissingNoDexEntry
-	dw MissingNoDexEntry
+	dw DonphanDexEntry
+	dw SudowoodoDexEntry
 	dw MissingNoDexEntry
 	dw VulpixDexEntry
 	dw NinetalesDexEntry
@@ -1252,6 +1252,97 @@ VictreebelDexEntry:
 	db 5,7
 	dw 340
 	text_far _VictreebelDexEntry
+	text_end
+
+EspeonDexEntry:
+	db "SUN@"
+	db 2,11
+	dw 584
+	text_far _EspeonDexEntry
+	text_end
+
+UmbreonDexEntry:
+	db "MOONLIGHT@"
+	db 3,3
+	dw 595
+	text_far _UmbreonDexEntry
+	text_end
+
+SylveonDexEntry:
+	db "INTERTWINING@"
+	db 3,3
+	dw 518
+	text_far _SylveonDexEntry
+	text_end
+
+CrobatDexEntry:
+	db "BAT@"
+	db 5,11
+	dw 1653
+	text_far _CrobatDexEntry
+	text_end
+
+MarillDexEntry:
+	db "AQUA MOUSE@"
+	db 1,4
+	dw 187
+	text_far _MarillDexEntry
+	text_end
+
+AzumarillDexEntry:
+	db "AQUA RABBIT@"
+	db 2,7
+	dw 622
+	text_far _AzumarillDexEntry
+	text_end
+
+SteelixDexEntry:
+	db "IRON SNAKE@"
+	db 30,2
+	dw 8818
+	text_far _SteelixDexEntry
+	text_end
+
+ScizorDexEntry:
+	db "PINCER@"
+	db 5,11
+	dw 2601
+	text_far _ScizorDexEntry
+	text_end
+
+HeracrossDexEntry:
+	db "SINGLE HORN@"
+	db 4,11
+	dw 1190
+	text_far _HeracrossDexEntry
+	text_end
+
+SkarmoryDexEntry:
+	db "ARMOR BIRD@"
+	db 5,7
+	dw 1113
+	text_far _SkarmoryDexEntry
+	text_end
+
+PhanpyDexEntry:
+	db "LONG NOSE@"
+	db 1,8
+	dw 739
+	text_far _PhanpyDexEntry
+	text_end
+
+DonphanDexEntry:
+	db "ARMOR@"
+	db 3,7
+	dw 2646
+	text_far _DonphanDexEntry
+	text_end
+
+SudowoodoDexEntry:
+	db "IMITATION@"
+	db 3,11
+	dw 838
+	text_far _SudowoodoDexEntry
 	text_end
 
 MissingNoDexEntry:

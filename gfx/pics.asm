@@ -325,6 +325,36 @@ VictreebelPicFront::   INCBIN "gfx/pokemon/front/victreebel.pic"
 VictreebelPicBack::    INCBIN "gfx/pokemon/back/victreebelb.pic"
 
 
+SECTION "Pics 6", ROMX
+
+EspeonPicFront::       INCBIN "gfx/pokemon/front/espeon.pic"
+EspeonPicBack::        INCBIN "gfx/pokemon/back/espeonb.pic"
+UmbreonPicFront::      INCBIN "gfx/pokemon/front/umbreon.pic"
+UmbreonPicBack::       INCBIN "gfx/pokemon/back/umbreonb.pic"
+SylveonPicFront::      INCBIN "gfx/pokemon/front/sylveon.pic"
+SylveonPicBack::       INCBIN "gfx/pokemon/back/sylveonb.pic"
+CrobatPicFront::       INCBIN "gfx/pokemon/front/crobat.pic"
+CrobatPicBack::        INCBIN "gfx/pokemon/back/crobatb.pic"
+MarillPicFront::       INCBIN "gfx/pokemon/front/marill.pic"
+MarillPicBack::        INCBIN "gfx/pokemon/back/marillb.pic"
+AzumarillPicFront::    INCBIN "gfx/pokemon/front/azumarill.pic"
+AzumarillPicBack::     INCBIN "gfx/pokemon/back/azumarillb.pic"
+SteelixPicFront::      INCBIN "gfx/pokemon/front/steelix.pic"
+SteelixPicBack::       INCBIN "gfx/pokemon/back/steelixb.pic"
+ScizorPicFront::       INCBIN "gfx/pokemon/front/scizor.pic"
+ScizorPicBack::        INCBIN "gfx/pokemon/back/scizorb.pic"
+HeracrossPicFront::    INCBIN "gfx/pokemon/front/heracross.pic"
+HeracrossPicBack::     INCBIN "gfx/pokemon/back/heracrossb.pic"
+SkarmoryPicFront::     INCBIN "gfx/pokemon/front/skarmory.pic"
+SkarmoryPicBack::      INCBIN "gfx/pokemon/back/skarmoryb.pic"
+PhanpyPicFront::       INCBIN "gfx/pokemon/front/phanpy.pic"
+PhanpyPicBack::        INCBIN "gfx/pokemon/back/phanpyb.pic"
+DonphanPicFront::      INCBIN "gfx/pokemon/front/donphan.pic"
+DonphanPicBack::       INCBIN "gfx/pokemon/back/donphanb.pic"
+SudowoodoPicFront::    INCBIN "gfx/pokemon/front/sudowoodo.pic"
+SudowoodoPicBack::     INCBIN "gfx/pokemon/back/sudowoodob.pic"
+
+
 SECTION "Trainer Pics", ROMX
 
 YoungsterPic::     INCBIN "gfx/trainers/youngster.pic"

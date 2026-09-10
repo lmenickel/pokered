@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>pokered Map Editor</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app">
+  <header id="toolbar">
+    <h1>pokered Map Editor</h1>
+
+    <div class="field">
+      <label>Map name</label>
+      <input type="text" id="mapName" value="NewTown" spellcheck="false">
+    </div>
+    <div class="field">
+      <label>Map const</label>
+      <input type="text" id="mapConst" value="NEW_TOWN" spellcheck="false">
+    </div>
+    <div class="field">
+      <label>Tileset</label>
+      <select id="tilesetSelect"></select>
+    </div>
+    <div class="field">
+      <label>W</label><input type="number" id="mapWidth" min="1" max="255" value="10">
+      <label>H</label><input type="number" id="mapHeight" min="1" max="255" value="9">
+      <button id="resizeBtn">Resize</button>
+    </div>
+    <div class="field">
+      <label>Border block</label>
+      <input type="number" id="borderBlock" min="0" max="255" value="0">
+    </div>
+    <div class="field">
+      <label>Zoom</label>
+      <select id="zoomSelect">
+        <option value="16">16px</option>
+        <option value="24">24px</option>
+        <option value="32" selected>32px</option>
+        <option value="48">48px</option>
+      </select>
+    </div>
+
+    <div class="sep"></div>
+
+    <div class="mode-btns">
+      <button id="modePaint" class="toggle active" title="Click/drag to paint the selected block">Paint</button>
+      <button id="modeWarp" class="toggle" title="Click a cell to add/edit a door or entrance">Warp</button>
+      <button id="modeErase" class="toggle" title="Click/drag to erase (paint block 0)">Erase</button>
+      <button id="modeSelect" class="toggle" title="Drag to select multiple blocks; shift+drag adds, alt+drag removes">Select</button>
+    </div>
+    <div class="field" id="selectionActions">
+      <button id="fillSelectionBtn" disabled title="Paint every selected cell with the currently selected palette block">Fill selection</button>
+      <button id="eraseSelectionBtn" disabled title="Erase every selected cell (set to block 0)">Erase selection</button>
+      <button id="saveSelectionStampBtn" disabled title="Selection must be a solid rectangle">Save as stamp</button>
+    </div>
+
+    <div class="sep"></div>
+
+    <div class="field">
+      <button id="loadBlkBtn" title="Import an existing maps/*.blk file into the current grid (dimensions must match W/H)">Import .blk</button>
+      <input type="file" id="loadBlkFile" accept=".blk" style="display:none">
+    </div>
+
+    <div class="sep"></div>
+
+    <div class="field">
+      <button id="saveProjectBtn">Save project</button>
+      <button id="loadProjectBtn">Load project</button>
+      <input type="file" id="loadProjectFile" accept=".json" style="display:none">
+    </div>
+
+    <div class="spacer"></div>
+    <span class="hint" id="autosaveHint"></span>
+  </header>
+
+  <aside id="palette">
+    <div class="section">
+      <h2>Blocks (drag onto map, or click to select then paint)</h2>
+      <div class="hint" style="margin-bottom:6px">Categories are derived from this repo's real collision/water/ledge/door/grass data per tileset — a best-effort split, not hand-curated, so a few blocks may land somewhere unexpected.</div>
+      <div id="categoryTabs" class="category-tabs"></div>
+      <div class="hint" style="margin:6px 0">Select mode on the map: drag to select, shift+drag adds, alt+drag removes. Fill/erase the selection, or (if it's a solid rectangle) save it as a stamp.</div>
+      <div id="blockGrid"></div>
+    </div>
+    <div class="section">
+      <h2>Stamps (houses / buildings)</h2>
+      <div id="stampList"></div>
+    </div>
+  </aside>
+
+  <main id="canvasWrap">
+    <canvas id="mapCanvas" width="320" height="288"></canvas>
+    <div id="statusbar"></div>
+  </main>
+
+  <aside id="inspector">
+    <div class="section">
+      <h2>Warps / doors / entrances</h2>
+      <div class="hint">Switch to Warp mode and click a block to place a door there. X/Y are in tile units (each block = 2×2 tiles), defaulted to the block's bottom-right tile; nudge by 1 if your door art sits elsewhere in the block. Warp id is which entry in the destination map's own <code>def_warps_to</code> list you land on.</div>
+      <table class="warp-table" id="warpTable">
+        <thead><tr><th>X</th><th>Y</th><th>Destination map</th><th>Warp id</th><th></th></tr></thead>
+        <tbody id="warpTableBody"></tbody>
+      </table>
+    </div>
+
+    <div class="section">
+      <h2>Map connections</h2>
+      <table class="conn-table" id="connTable">
+        <thead><tr><th></th><th>On</th><th>Target map</th><th>Offset</th></tr></thead>
+        <tbody id="connTableBody"></tbody>
+      </table>
+      <div class="hint">Offset shifts alignment between maps of different sizes, same as pokered's <code>connection</code> macro. You still need the target map to exist separately.</div>
+    </div>
+
+    <div class="section">
+      <h2>Export for the disassembly</h2>
+      <div class="export-buttons">
+        <button id="exportBlkBtn">Download &lt;name&gt;.blk (drop into maps/)</button>
+        <button id="exportHeaderBtn">Download &lt;name&gt;_header.asm</button>
+        <button id="exportObjectsBtn">Download &lt;name&gt;_objects.asm</button>
+      </div>
+      <div class="hint" style="margin-top:8px">
+        This tool only generates block layout, warps, and connections. You'll still need to
+        register the map in constants/map_constants.asm, data/maps/maps.asm, map_header_pointers.asm,
+        map_header_banks.asm, and wire up any signs/NPCs/wild data by hand.
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script src="data/data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

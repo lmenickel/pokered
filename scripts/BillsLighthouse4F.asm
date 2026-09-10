@@ -1,0 +1,15 @@
+BillsLighthouse4F_Script:
+	jp EnableAutoTextBoxDrawing
+
+BillsLighthouse4F_TextPointers:
+	def_text_pointers
+	dw_const BillsLighthouse4FBillText,      TEXT_BILLSLIGHTHOUSE4F_BILL
+	dw_const BillsLighthouse4FTelescopeText, TEXT_BILLSLIGHTHOUSE4F_TELESCOPE
+
+BillsLighthouse4FBillText:
+	text_far _BillsLighthouse4FBillText
+	text_end
+
+BillsLighthouse4FTelescopeText:
+	text_far _BillsLighthouse4FTelescopeText
+	text_end

@@ -1,6 +1,6 @@
 	map_header SaffronCity, SAFFRON_CITY, OVERWORLD, NORTH | SOUTH | WEST | EAST
-	connection north, Route5, ROUTE_5, 5
-	connection south, Route6, ROUTE_6, 5
-	connection west, Route7, ROUTE_7, 4
-	connection east, Route8, ROUTE_8, 4
+	connection north, CeruleanForest, CERULEAN_FOREST, 0
+	connection south, VermilionForest, VERMILION_FOREST, 0
+	connection west, CeladonForest, CELADON_FOREST, -2
+	connection east, LavenderForest, LAVENDER_FOREST, -2
 	end_map_header

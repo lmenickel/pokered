@@ -110,10 +110,10 @@ MapHeaderPointers::
 	dw LancesRoom_h ; UNUSED_MAP_6A
 	dw LancesRoom_h ; UNUSED_MAP_6B
 	dw VictoryRoad1F_h
-	dw LancesRoom_h ; UNUSED_MAP_6D
-	dw LancesRoom_h ; UNUSED_MAP_6E
-	dw LancesRoom_h ; UNUSED_MAP_6F
-	dw LancesRoom_h ; UNUSED_MAP_70
+	dw BillsLighthouse1F_h ; BILLS_LIGHTHOUSE_1F
+	dw BillsLighthouse2F_h ; BILLS_LIGHTHOUSE_2F
+	dw BillsLighthouse3F_h ; BILLS_LIGHTHOUSE_3F
+	dw BillsLighthouse4F_h ; BILLS_LIGHTHOUSE_4F
 	dw LancesRoom_h
 	dw LancesRoom_h ; UNUSED_MAP_72
 	dw LancesRoom_h ; UNUSED_MAP_73
@@ -205,9 +205,9 @@ MapHeaderPointers::
 	dw RocketHideoutB3F_h
 	dw RocketHideoutB4F_h
 	dw RocketHideoutElevator_h
-	dw RocketHideoutElevator_h ; UNUSED_MAP_CC
-	dw RocketHideoutElevator_h ; UNUSED_MAP_CD
-	dw RocketHideoutElevator_h ; UNUSED_MAP_CE
+	dw Cinn_vol_1F_h ; CINN_VOL_1F
+	dw Cinn_vol_TF_h ; CINN_VOL_TF
+	dw Cinn_vol_BF_h ; CINN_VOL_BF
 	dw SilphCo2F_h
 	dw SilphCo3F_h
 	dw SilphCo4F_h
@@ -249,4 +249,9 @@ MapHeaderPointers::
 	dw LoreleisRoom_h
 	dw BrunosRoom_h
 	dw AgathasRoom_h
+	dw CeruleanForest_h
+	dw LavenderForest_h
+	dw CeladonForest_h
+	dw VermilionForest_h
+	dw BillsLighthouse_h
 	assert_table_length NUM_MAPS

@@ -155,5 +155,18 @@
 	const DEX_DRAGONITE  ; 149
 	const DEX_MEWTWO     ; 150
 	const DEX_MEW        ; 151
+	const DEX_ESPEON     ; 152
+	const DEX_UMBREON    ; 153
+	const DEX_SYLVEON    ; 154
+	const DEX_CROBAT     ; 155
+	const DEX_MARILL     ; 156
+	const DEX_AZUMARILL  ; 157
+	const DEX_STEELIX    ; 158
+	const DEX_SCIZOR     ; 159
+	const DEX_HERACROSS  ; 160
+	const DEX_SKARMORY   ; 161
+	const DEX_PHANPY     ; 162
+	const DEX_DONPHAN    ; 163
+	const DEX_SUDOWOODO  ; 164
 
 DEF NUM_POKEMON EQU const_value - 1

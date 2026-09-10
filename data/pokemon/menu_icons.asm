@@ -151,4 +151,17 @@ MonPartyData:
 	nybble ICON_SNAKE     ; Dragonite
 	nybble ICON_MON       ; Mewtwo
 	nybble ICON_MON       ; Mew
+	nybble ICON_QUADRUPED ; Espeon
+	nybble ICON_QUADRUPED ; Umbreon
+	nybble ICON_QUADRUPED ; Sylveon
+	nybble ICON_MON       ; Crobat
+	nybble ICON_WATER     ; Marill
+	nybble ICON_WATER     ; Azumarill
+	nybble ICON_SNAKE     ; Steelix
+	nybble ICON_MON       ; Scizor
+	nybble ICON_MON       ; Heracross
+	nybble ICON_MON       ; Skarmory
+	nybble ICON_QUADRUPED ; Phanpy
+	nybble ICON_QUADRUPED ; Donphan
+	nybble ICON_MON       ; Sudowoodo
 	end_nybble_array NUM_POKEMON
