@@ -204,9 +204,9 @@ WildDataPointers:
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
-	dw NothingWildMons
+	dw Cinn_vol_1FWildMons     ; CINN_VOL_1F
+	dw Cinn_vol_TFWildMons     ; CINN_VOL_TF
+	dw Cinn_vol_BFWildMons     ; CINN_VOL_BF
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
@@ -331,3 +331,6 @@ INCLUDE "data/wild/maps/VermilionForest.asm"
 INCLUDE "data/wild/maps/LavenderForest.asm"
 INCLUDE "data/wild/maps/CeladonForest.asm"
 INCLUDE "data/wild/maps/BillsLighthouse.asm"
+INCLUDE "data/wild/maps/Cinn_vol_1F.asm"
+INCLUDE "data/wild/maps/Cinn_vol_TF.asm"
+INCLUDE "data/wild/maps/Cinn_vol_BF.asm"
