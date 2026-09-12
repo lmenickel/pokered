@@ -248,6 +248,11 @@ WildDataPointers:
 	dw NothingWildMons
 	dw NothingWildMons
 	dw NothingWildMons
+	dw CeruleanForestWildMons  ; CERULEAN_FOREST
+	dw LavenderForestWildMons  ; LAVENDER_FOREST
+	dw CeladonForestWildMons   ; CELADON_FOREST
+	dw VermilionForestWildMons ; VERMILION_FOREST
+	dw BillsLighthouseWildMons ; BILLS_LIGHTHOUSE
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 
@@ -321,3 +326,8 @@ INCLUDE "data/wild/maps/VictoryRoad2F.asm"
 INCLUDE "data/wild/maps/VictoryRoad3F.asm"
 INCLUDE "data/wild/maps/VictoryRoad1F.asm"
 INCLUDE "data/wild/maps/DiglettsCave.asm"
+INCLUDE "data/wild/maps/CeruleanForest.asm"
+INCLUDE "data/wild/maps/VermilionForest.asm"
+INCLUDE "data/wild/maps/LavenderForest.asm"
+INCLUDE "data/wild/maps/CeladonForest.asm"
+INCLUDE "data/wild/maps/BillsLighthouse.asm"

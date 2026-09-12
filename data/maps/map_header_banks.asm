@@ -110,10 +110,10 @@ MapHeaderBanks::
 	db $1D ; UNUSED_MAP_6A
 	db $1D ; UNUSED_MAP_6B
 	db BANK(VictoryRoad1F_h)
-	db $1D ; UNUSED_MAP_6D
-	db $1D ; UNUSED_MAP_6E
-	db $1D ; UNUSED_MAP_6F
-	db $1D ; UNUSED_MAP_70
+	db BANK(BillsLighthouse1F_h) ; BILLS_LIGHTHOUSE_1F
+	db BANK(BillsLighthouse2F_h) ; BILLS_LIGHTHOUSE_2F
+	db BANK(BillsLighthouse3F_h) ; BILLS_LIGHTHOUSE_3F
+	db BANK(BillsLighthouse4F_h) ; BILLS_LIGHTHOUSE_4F
 	db BANK(LancesRoom_h)
 	db $1D ; UNUSED_MAP_72
 	db $1D ; UNUSED_MAP_73
@@ -205,9 +205,9 @@ MapHeaderBanks::
 	db BANK(RocketHideoutB3F_h)
 	db BANK(RocketHideoutB4F_h)
 	db BANK(RocketHideoutElevator_h)
-	db $01 ; UNUSED_MAP_CC
-	db $01 ; UNUSED_MAP_CD
-	db $01 ; UNUSED_MAP_CE
+	db BANK(Cinn_vol_1F_h) ; CINN_VOL_1F
+	db BANK(Cinn_vol_TF_h) ; CINN_VOL_TF
+	db BANK(Cinn_vol_BF_h) ; CINN_VOL_BF
 	db BANK(SilphCo2F_h)
 	db BANK(SilphCo3F_h)
 	db BANK(SilphCo4F_h)
@@ -249,4 +249,9 @@ MapHeaderBanks::
 	db BANK(LoreleisRoom_h)
 	db BANK(BrunosRoom_h)
 	db BANK(AgathasRoom_h)
+	db BANK(CeruleanForest_h)
+	db BANK(LavenderForest_h)
+	db BANK(CeladonForest_h)
+	db BANK(VermilionForest_h)
+	db BANK(BillsLighthouse_h)
 	assert_table_length NUM_MAPS

@@ -1219,3 +1219,66 @@ INCLUDE "data/maps/headers/AgathasRoom.asm"
 INCLUDE "scripts/AgathasRoom.asm"
 INCLUDE "data/maps/objects/AgathasRoom.asm"
 AgathasRoom_Blocks: INCBIN "maps/AgathasRoom.blk"
+
+
+SECTION "Maps 22", ROMX
+
+INCLUDE "data/maps/headers/CeruleanForest.asm"
+INCLUDE "scripts/CeruleanForest.asm"
+INCLUDE "data/maps/objects/CeruleanForest.asm"
+CeruleanForest_Blocks: INCBIN "maps/CeruleanForest.blk"
+
+INCLUDE "data/maps/headers/LavenderForest.asm"
+INCLUDE "scripts/LavenderForest.asm"
+INCLUDE "data/maps/objects/LavenderForest.asm"
+LavenderForest_Blocks: INCBIN "maps/LavenderForest.blk"
+
+INCLUDE "data/maps/headers/CeladonForest.asm"
+INCLUDE "scripts/CeladonForest.asm"
+INCLUDE "data/maps/objects/CeladonForest.asm"
+CeladonForest_Blocks: INCBIN "maps/CeladonForest.blk"
+
+INCLUDE "data/maps/headers/VermilionForest.asm"
+INCLUDE "scripts/VermilionForest.asm"
+INCLUDE "data/maps/objects/VermilionForest.asm"
+VermilionForest_Blocks: INCBIN "maps/VermilionForest.blk"
+
+INCLUDE "data/maps/headers/BillsLighthouse.asm"
+INCLUDE "scripts/BillsLighthouse.asm"
+INCLUDE "data/maps/objects/BillsLighthouse.asm"
+BillsLighthouse_Blocks: INCBIN "maps/BillsLighthouse.blk"
+
+INCLUDE "data/maps/headers/BillsLighthouse1F.asm"
+INCLUDE "scripts/BillsLighthouse1F.asm"
+INCLUDE "data/maps/objects/BillsLighthouse1F.asm"
+BillsLighthouse1F_Blocks: INCBIN "maps/BillsLighthouse1F.blk"
+
+INCLUDE "data/maps/headers/BillsLighthouse2F.asm"
+INCLUDE "scripts/BillsLighthouse2F.asm"
+INCLUDE "data/maps/objects/BillsLighthouse2F.asm"
+BillsLighthouse2F_Blocks: INCBIN "maps/BillsLighthouse2F.blk"
+
+INCLUDE "data/maps/headers/BillsLighthouse3F.asm"
+INCLUDE "scripts/BillsLighthouse3F.asm"
+INCLUDE "data/maps/objects/BillsLighthouse3F.asm"
+BillsLighthouse3F_Blocks: INCBIN "maps/BillsLighthouse3F.blk"
+
+INCLUDE "data/maps/headers/BillsLighthouse4F.asm"
+INCLUDE "scripts/BillsLighthouse4F.asm"
+INCLUDE "data/maps/objects/BillsLighthouse4F.asm"
+BillsLighthouse4F_Blocks: INCBIN "maps/BillsLighthouse4F.blk"
+
+INCLUDE "data/maps/headers/Cinn_vol_1F.asm"
+INCLUDE "scripts/Cinn_vol_1F.asm"
+INCLUDE "data/maps/objects/Cinn_vol_1F.asm"
+Cinn_vol_1F_Blocks: INCBIN "maps/Cinn_vol_1F.blk"
+
+INCLUDE "data/maps/headers/Cinn_vol_TF.asm"
+INCLUDE "scripts/Cinn_vol_TF.asm"
+INCLUDE "data/maps/objects/Cinn_vol_TF.asm"
+Cinn_vol_TF_Blocks: INCBIN "maps/Cinn_vol_TF.blk"
+
+INCLUDE "data/maps/headers/Cinn_vol_BF.asm"
+INCLUDE "scripts/Cinn_vol_BF.asm"
+INCLUDE "data/maps/objects/Cinn_vol_BF.asm"
+Cinn_vol_BF_Blocks: INCBIN "maps/Cinn_vol_BF.blk"

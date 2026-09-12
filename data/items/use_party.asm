@@ -21,6 +21,8 @@ UsableItems_PartyMenu:
 	db CALCIUM
 	db RARE_CANDY
 	db LEAF_STONE
+	db SUN_STONE
+	db SHINY_STONE
 	db FULL_HEAL
 	db REVIVE
 	db MAX_REVIVE

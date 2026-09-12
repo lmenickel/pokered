@@ -35,3 +35,9 @@
 rgbds-linux-x86_64.tar.xz
 *:Zone.Identifier
 move_effects.csv
+
+# generated cry previews
+tools/audio_preview/*.wav
+gen_1_style_eevee_and_family.jpg
+moves.csv
+pokered.ss1

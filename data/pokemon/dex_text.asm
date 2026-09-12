@@ -1507,3 +1507,136 @@ _VictreebelDexEntry::
 	next "has ever returned"
 	next "from there"
 	dex
+
+_EspeonDexEntry::
+	text "Its fine fur"
+	next "senses air cur-"
+	next "rents to predict"
+
+	page "the weather. Its"
+	next "eyes can see 900"
+	next "feet ahead"
+	dex
+
+_UmbreonDexEntry::
+	text "When exposed to"
+	next "moonlight, its"
+	next "rings glow"
+
+	page "yellow, striking"
+	next "fear into any"
+	next "would-be foe"
+	dex
+
+_SylveonDexEntry::
+	text "Its ribbon-like"
+	next "feelers sense"
+	next "others' moods"
+
+	page "and emotions,"
+	next "calming foes"
+	next "before they"
+	next "fight"
+	dex
+
+_CrobatDexEntry::
+	text "It alternates"
+	next "between two"
+	next "sets of wings"
+
+	page "so it never"
+	next "tires of its"
+	next "silent, ceaseless"
+	next "flight"
+	dex
+
+_MarillDexEntry::
+	text "Its rubbery tail"
+	next "is filled with"
+	next "buoyant fluid"
+
+	page "letting it float"
+	next "and paddle for"
+	next "hours untiring"
+	dex
+
+_AzumarillDexEntry::
+	text "The pouch on its"
+	next "belly stores"
+	next "food for its"
+	next "young"
+
+	page "Its ears pick up"
+	next "faint sounds"
+	next "underwater"
+	dex
+
+_SteelixDexEntry::
+	text "Its body turned"
+	next "to solid steel"
+	next "after burrowing"
+
+	page "deep enough to"
+	next "feel the heat of"
+	next "the earth's core"
+	dex
+
+_ScizorDexEntry::
+	text "Its pincers are"
+	next "harder than"
+	next "iron and can"
+
+	page "crush through"
+	next "solid rock with"
+	next "a single snap"
+	dex
+
+_HeracrossDexEntry::
+	text "It wedges its"
+	next "horn under foes"
+	next "and flings them"
+
+	page "with enough"
+	next "force to hurl"
+	next "them skyward"
+	dex
+
+_SkarmoryDexEntry::
+	text "Its feathers are"
+	next "sheets of hard"
+	next "steel that clang"
+
+	page "loudly whenever"
+	next "it beats its"
+	next "wings in flight"
+	dex
+
+_PhanpyDexEntry::
+	text "It uses its long"
+	next "nose to spray"
+	next "itself and"
+
+	page "playmates with"
+	next "water while"
+	next "bathing"
+	dex
+
+_DonphanDexEntry::
+	text "It curls into a"
+	next "ball and rolls"
+	next "downhill,"
+
+	page "flattening"
+	next "everything in"
+	next "its path"
+	dex
+
+_SudowoodoDexEntry::
+	text "It disguises"
+	next "itself as a tree"
+	next "to avoid being"
+
+	page "attacked, but it"
+	next "hates water and"
+	next "wilts if soaked"
+	dex

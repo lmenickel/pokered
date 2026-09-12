@@ -180,10 +180,10 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const VICTORY_ROAD_1F,               10,  9 ; $6C
 	end_indoor_group VICTORY_ROAD
 
-	map_const UNUSED_MAP_6D,                  0,  0 ; $6D
-	map_const UNUSED_MAP_6E,                  0,  0 ; $6E
-	map_const UNUSED_MAP_6F,                  0,  0 ; $6F
-	map_const UNUSED_MAP_70,                  0,  0 ; $70
+	map_const BILLS_LIGHTHOUSE_1F,             4,  6 ; $6D
+	map_const BILLS_LIGHTHOUSE_2F,             4,  6 ; $6E
+	map_const BILLS_LIGHTHOUSE_3F,             4,  4 ; $6F
+	map_const BILLS_LIGHTHOUSE_4F,             4,  6 ; $70
 	map_const LANCES_ROOM,                   13, 13 ; $71
 	map_const UNUSED_MAP_72,                  0,  0 ; $72
 	map_const UNUSED_MAP_73,                  0,  0 ; $73
@@ -333,9 +333,9 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const ROCKET_HIDEOUT_B3F,            15, 14 ; $C9
 	map_const ROCKET_HIDEOUT_B4F,            15, 12 ; $CA
 	map_const ROCKET_HIDEOUT_ELEVATOR,        3,  4 ; $CB
-	map_const UNUSED_MAP_CC,                  0,  0 ; $CC
-	map_const UNUSED_MAP_CD,                  0,  0 ; $CD
-	map_const UNUSED_MAP_CE,                  0,  0 ; $CE
+	map_const CINN_VOL_1F,                    17, 16 ; $CC
+	map_const CINN_VOL_TF,                    17, 16 ; $CD
+	map_const CINN_VOL_BF,                     8, 16 ; $CE
 	end_indoor_group ROCKET_HQ
 
 	map_const SILPH_CO_2F,                   15,  9 ; $CF
@@ -396,6 +396,12 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const BRUNOS_ROOM,                    5,  6 ; $F6
 	map_const AGATHAS_ROOM,                   5,  6 ; $F7
 	end_indoor_group POKEMON_LEAGUE_3
+
+	map_const CERULEAN_FOREST,               20, 23 ; $F8
+	map_const LAVENDER_FOREST,               20, 23 ; $F9
+	map_const CELADON_FOREST,                20, 23 ; $FA
+	map_const VERMILION_FOREST,              20, 23 ; $FB
+	map_const BILLS_LIGHTHOUSE,              30,  9 ; $FC
 DEF NUM_MAPS EQU const_value
 
 ; Indoor maps, such as houses, use this as the Map ID in their exit warps
