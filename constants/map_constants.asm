@@ -401,7 +401,6 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const LAVENDER_FOREST,               20, 23 ; $F9
 	map_const CELADON_FOREST,                20, 23 ; $FA
 	map_const VERMILION_FOREST,              20, 23 ; $FB
-	map_const BILLS_LIGHTHOUSE,              30,  9 ; $FC
 DEF NUM_MAPS EQU const_value
 
 ; Indoor maps, such as houses, use this as the Map ID in their exit warps

@@ -1263,11 +1263,6 @@ INCLUDE "scripts/VermilionForest.asm"
 INCLUDE "data/maps/objects/VermilionForest.asm"
 VermilionForest_Blocks: INCBIN "maps/VermilionForest.blk"
 
-INCLUDE "data/maps/headers/BillsLighthouse.asm"
-INCLUDE "scripts/BillsLighthouse.asm"
-INCLUDE "data/maps/objects/BillsLighthouse.asm"
-BillsLighthouse_Blocks: INCBIN "maps/BillsLighthouse.blk"
-
 INCLUDE "data/maps/headers/BillsLighthouse1F.asm"
 INCLUDE "scripts/BillsLighthouse1F.asm"
 INCLUDE "data/maps/objects/BillsLighthouse1F.asm"

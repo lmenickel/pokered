@@ -253,5 +253,4 @@ MapHeaderPointers::
 	dw LavenderForest_h
 	dw CeladonForest_h
 	dw VermilionForest_h
-	dw BillsLighthouse_h
 	assert_table_length NUM_MAPS

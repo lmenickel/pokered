@@ -253,5 +253,4 @@ MapHeaderBanks::
 	db BANK(LavenderForest_h)
 	db BANK(CeladonForest_h)
 	db BANK(VermilionForest_h)
-	db BANK(BillsLighthouse_h)
 	assert_table_length NUM_MAPS
