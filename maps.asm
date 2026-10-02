@@ -218,6 +218,26 @@ INCLUDE "scripts/Route8Gate.asm"
 INCLUDE "data/maps/objects/Route8Gate.asm"
 Route8Gate_Blocks: INCBIN "maps/Route8Gate.blk"
 
+INCLUDE "data/maps/headers/CeruleanForestGate.asm"
+INCLUDE "scripts/CeruleanForestGate.asm"
+INCLUDE "data/maps/objects/CeruleanForestGate.asm"
+CeruleanForestGate_Blocks: INCBIN "maps/CeruleanForestGate.blk"
+
+INCLUDE "data/maps/headers/VermilionForestGate.asm"
+INCLUDE "scripts/VermilionForestGate.asm"
+INCLUDE "data/maps/objects/VermilionForestGate.asm"
+VermilionForestGate_Blocks: INCBIN "maps/VermilionForestGate.blk"
+
+INCLUDE "data/maps/headers/CeladonForestGate.asm"
+INCLUDE "scripts/CeladonForestGate.asm"
+INCLUDE "data/maps/objects/CeladonForestGate.asm"
+CeladonForestGate_Blocks: INCBIN "maps/CeladonForestGate.blk"
+
+INCLUDE "data/maps/headers/LavenderForestGate.asm"
+INCLUDE "scripts/LavenderForestGate.asm"
+INCLUDE "data/maps/objects/LavenderForestGate.asm"
+LavenderForestGate_Blocks: INCBIN "maps/LavenderForestGate.blk"
+
 INCLUDE "data/maps/headers/UndergroundPathRoute8.asm"
 INCLUDE "scripts/UndergroundPathRoute8.asm"
 INCLUDE "data/maps/objects/UndergroundPathRoute8.asm"

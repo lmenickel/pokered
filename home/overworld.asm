@@ -684,6 +684,15 @@ CheckMapConnections::
 ; x#SPRITESTATEDATA2_IMAGEBASEOFFSET without loading any tile patterns.
 	farcall InitMapSprites
 	call LoadTileBlockMap
+; LoadMapHeader switches the blockset but not the tile patterns in VRAM
+; or the map view already on screen, so redraw both if the tileset changed
+	ld a, [wUnusedCurMapTilesetCopy] ; tileset of the map we just left
+	ld b, a
+	ld a, [wCurMapTileset]
+	cp b
+	jp z, OverworldLoopLessDelay
+	call ReloadTilesetTilePatterns
+	farcall RedrawMapView
 	jp OverworldLoopLessDelay
 
 .didNotEnterConnectedMap
@@ -1014,6 +1023,9 @@ LoadTileBlockMap::
 	ret
 
 LoadNorthSouthConnectionsTileMap::
+	ldh a, [hNorthSouthConnectionStripWidth]
+	and a
+	ret z ; zero-length strip: connected map has a different tileset
 	ld c, MAP_BORDER
 .loop
 	push de
@@ -1046,6 +1058,9 @@ LoadNorthSouthConnectionsTileMap::
 	ret
 
 LoadEastWestConnectionsTileMap::
+	ld a, b
+	and a
+	ret z ; zero-length strip: connected map has a different tileset
 	push hl
 	push de
 	ld c, MAP_BORDER

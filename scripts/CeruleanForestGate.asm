@@ -1,0 +1,6 @@
+CeruleanForestGate_Script:
+	jp EnableAutoTextBoxDrawing
+
+CeruleanForestGate_TextPointers:
+	def_text_pointers
+	dw_const SaffronGateGuardText, TEXT_CERULEANFORESTGATE_GUARD
