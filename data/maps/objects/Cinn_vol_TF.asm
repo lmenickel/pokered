@@ -1,7 +1,7 @@
 	object_const_def
 
 Cinn_vol_TF_Object:
-	db 1 ; border block
+	db 3 ; border block
 
 	def_warp_events
 	warp_event 17, 23, CINN_VOL_1F, 1 ; ladder down to 1F

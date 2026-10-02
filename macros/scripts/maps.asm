@@ -225,7 +225,11 @@ MACRO connection
 	db \3
 	dw \2_Blocks + _blk
 	dw wOverworldMap + _map
-	db _len - _src
+	IF _NARG > 4
+		db 0 ; no strip: connected map uses a different tileset
+	ELSE
+		db _len - _src
+	ENDC
 	db \3_WIDTH
 	db _y, _x
 	dw wOverworldMap + _win

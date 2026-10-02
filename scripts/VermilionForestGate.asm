@@ -1,0 +1,6 @@
+VermilionForestGate_Script:
+	jp EnableAutoTextBoxDrawing
+
+VermilionForestGate_TextPointers:
+	def_text_pointers
+	dw_const SaffronGateGuardText, TEXT_VERMILIONFORESTGATE_GUARD

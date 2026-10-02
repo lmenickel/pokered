@@ -1,0 +1,6 @@
+LavenderForestGate_Script:
+	jp EnableAutoTextBoxDrawing
+
+LavenderForestGate_TextPointers:
+	def_text_pointers
+	dw_const SaffronGateGuardText, TEXT_LAVENDERFORESTGATE_GUARD

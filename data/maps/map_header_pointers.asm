@@ -239,12 +239,12 @@ MapHeaderPointers::
 	dw SilphCo11F_h
 	dw SilphCoElevator_h
 	dw SilphCo2F_h ; UNUSED_MAP_ED
-	dw SilphCo2F_h ; UNUSED_MAP_EE
+	dw CeruleanForestGate_h
 	dw TradeCenter_h
 	dw Colosseum_h
-	dw SilphCo2F_h ; UNUSED_MAP_F1
-	dw SilphCo2F_h ; UNUSED_MAP_F2
-	dw SilphCo2F_h ; UNUSED_MAP_F3
+	dw VermilionForestGate_h
+	dw CeladonForestGate_h
+	dw LavenderForestGate_h
 	dw SilphCo2F_h ; UNUSED_MAP_F4
 	dw LoreleisRoom_h
 	dw BrunosRoom_h
@@ -253,5 +253,4 @@ MapHeaderPointers::
 	dw LavenderForest_h
 	dw CeladonForest_h
 	dw VermilionForest_h
-	dw BillsLighthouse_h
 	assert_table_length NUM_MAPS
