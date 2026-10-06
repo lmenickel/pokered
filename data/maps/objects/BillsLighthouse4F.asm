@@ -2,7 +2,7 @@
 	const_export BILLSLIGHTHOUSE4F_BILL
 
 BillsLighthouse4F_Object:
-	db 1 ; border block
+	db $f ; border block
 
 	def_warp_events
 	warp_event  7,  1, BILLS_LIGHTHOUSE_3F, 1

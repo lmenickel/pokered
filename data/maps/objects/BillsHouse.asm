@@ -7,8 +7,10 @@ BillsHouse_Object:
 	db $d ; border block
 
 	def_warp_events
-	warp_event  2,  7, LAST_MAP, 1
-	warp_event  3,  7, LAST_MAP, 1
+	warp_event  2,  7, ROUTE_25, 1
+	warp_event  3,  7, ROUTE_25, 1
+	warp_event  3,  2, BILLS_LIGHTHOUSE_ROUTE, 2 ; back door
+	warp_event  3,  3, BILLS_LIGHTHOUSE_ROUTE, 2 ; arrival from the route, one tile inside so the exit step works
 
 	def_bg_events
 

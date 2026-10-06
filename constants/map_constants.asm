@@ -36,7 +36,7 @@ ENDM
 	map_const SAFFRON_CITY,                  20, 18 ; $0A
 DEF NUM_CITY_MAPS EQU const_value
 
-	map_const UNUSED_MAP_0B,                  0,  0 ; $0B
+	map_const BILLS_LIGHTHOUSE_ROUTE,        18, 10 ; $0B
 
 DEF FIRST_ROUTE_MAP EQU const_value
 	map_const ROUTE_1,                       10, 18 ; $0C
@@ -182,7 +182,7 @@ DEF FIRST_INDOOR_MAP EQU const_value
 
 	map_const BILLS_LIGHTHOUSE_1F,             4,  6 ; $6D
 	map_const BILLS_LIGHTHOUSE_2F,             4,  6 ; $6E
-	map_const BILLS_LIGHTHOUSE_3F,             4,  4 ; $6F
+	map_const BILLS_LIGHTHOUSE_3F,             4,  6 ; $6F
 	map_const BILLS_LIGHTHOUSE_4F,             4,  6 ; $70
 	map_const LANCES_ROOM,                   13, 13 ; $71
 	map_const UNUSED_MAP_72,                  0,  0 ; $72
