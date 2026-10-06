@@ -9,8 +9,8 @@ BillsHouse_Object:
 	def_warp_events
 	warp_event  2,  7, ROUTE_25, 1
 	warp_event  3,  7, ROUTE_25, 1
-	warp_event  3,  2, BILLS_LIGHTHOUSE_ROUTE, 2 ; back door
-	warp_event  3,  3, BILLS_LIGHTHOUSE_ROUTE, 2 ; arrival from the route, one tile inside so the exit step works
+	warp_event  9,  0, BILLS_LIGHTHOUSE_ROUTE, 2 ; back door (top right)
+	warp_event  8,  1, BILLS_LIGHTHOUSE_ROUTE, 2 ; arrival from the route, beside the back door (not on the map edge)
 
 	def_bg_events
 
