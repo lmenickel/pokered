@@ -5,10 +5,10 @@ BillsLighthouse4F_Object:
 	db $f ; border block
 
 	def_warp_events
-	warp_event  7,  1, BILLS_LIGHTHOUSE_3F, 1
+	warp_event  6,  1, BILLS_LIGHTHOUSE_3F, 1
 
 	def_bg_events
-	bg_event  3,  5, TEXT_BILLSLIGHTHOUSE4F_TELESCOPE
+	bg_event  4,  9, TEXT_BILLSLIGHTHOUSE4F_TELESCOPE
 
 	def_object_events
 	object_event  2,  6, SPRITE_SUPER_NERD, STAY, UP, TEXT_BILLSLIGHTHOUSE4F_BILL
