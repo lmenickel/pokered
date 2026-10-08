@@ -30,10 +30,10 @@ SaffronCity_Object:
 	warp_event 18,  3, ROUTE_5_GATE, 1
 	warp_event 23, 31, ROUTE_6_GATE, 3
 	warp_event 24, 31, ROUTE_6_GATE, 4
-	warp_event  4, 17, ROUTE_7_GATE, 3
-	warp_event  4, 18, ROUTE_7_GATE, 4
-	warp_event 35, 17, ROUTE_8_GATE, 1
-	warp_event 35, 18, ROUTE_8_GATE, 2
+	warp_event  2, 18, ROUTE_7_GATE, 3
+	warp_event  2, 19, ROUTE_7_GATE, 4
+	warp_event 37, 18, ROUTE_8_GATE, 1
+	warp_event 37, 19, ROUTE_8_GATE, 2
 
 	def_bg_events
 	bg_event 17,  5, TEXT_SAFFRONCITY_SIGN
