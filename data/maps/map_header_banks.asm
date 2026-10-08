@@ -12,7 +12,7 @@ MapHeaderBanks::
 	db BANK(CinnabarIsland_h)
 	db BANK(IndigoPlateau_h)
 	db BANK(SaffronCity_h)
-	db $01 ; UNUSED_MAP_0B
+	db BANK(BillsLighthouseRoute_h)
 	db BANK(Route1_h)
 	db BANK(Route2_h)
 	db BANK(Route3_h)
@@ -239,12 +239,12 @@ MapHeaderBanks::
 	db BANK(SilphCo11F_h)
 	db BANK(SilphCoElevator_h)
 	db $11 ; UNUSED_MAP_ED
-	db $11 ; UNUSED_MAP_EE
+	db BANK(CeruleanForestGate_h)
 	db BANK(TradeCenter_h)
 	db BANK(Colosseum_h)
-	db $11 ; UNUSED_MAP_F1
-	db $11 ; UNUSED_MAP_F2
-	db $11 ; UNUSED_MAP_F3
+	db BANK(VermilionForestGate_h)
+	db BANK(CeladonForestGate_h)
+	db BANK(LavenderForestGate_h)
 	db $11 ; UNUSED_MAP_F4
 	db BANK(LoreleisRoom_h)
 	db BANK(BrunosRoom_h)
@@ -253,5 +253,4 @@ MapHeaderBanks::
 	db BANK(LavenderForest_h)
 	db BANK(CeladonForest_h)
 	db BANK(VermilionForest_h)
-	db BANK(BillsLighthouse_h)
 	assert_table_length NUM_MAPS

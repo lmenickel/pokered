@@ -36,7 +36,7 @@ ENDM
 	map_const SAFFRON_CITY,                  20, 18 ; $0A
 DEF NUM_CITY_MAPS EQU const_value
 
-	map_const UNUSED_MAP_0B,                  0,  0 ; $0B
+	map_const BILLS_LIGHTHOUSE_ROUTE,        18, 10 ; $0B
 
 DEF FIRST_ROUTE_MAP EQU const_value
 	map_const ROUTE_1,                       10, 18 ; $0C
@@ -151,7 +151,7 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const ROUTE_12_GATE_1F,               5,  4 ; $57
 	end_indoor_group ROUTE_12
 
-	map_const BILLS_HOUSE,                    4,  4 ; $58
+	map_const BILLS_HOUSE,                    5,  4 ; $58
 	end_indoor_group SEA_COTTAGE
 
 	map_const VERMILION_POKECENTER,           7,  4 ; $59
@@ -182,7 +182,7 @@ DEF FIRST_INDOOR_MAP EQU const_value
 
 	map_const BILLS_LIGHTHOUSE_1F,             4,  6 ; $6D
 	map_const BILLS_LIGHTHOUSE_2F,             4,  6 ; $6E
-	map_const BILLS_LIGHTHOUSE_3F,             4,  4 ; $6F
+	map_const BILLS_LIGHTHOUSE_3F,             4,  6 ; $6F
 	map_const BILLS_LIGHTHOUSE_4F,             4,  6 ; $70
 	map_const LANCES_ROOM,                   13, 13 ; $71
 	map_const UNUSED_MAP_72,                  0,  0 ; $72
@@ -385,12 +385,12 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	end_indoor_group SILPH_CO_2
 
 	map_const UNUSED_MAP_ED,                  0,  0 ; $ED
-	map_const UNUSED_MAP_EE,                  0,  0 ; $EE
+	map_const CERULEAN_FOREST_GATE,             4,  3 ; $EE
 	map_const TRADE_CENTER,                   5,  4 ; $EF
 	map_const COLOSSEUM,                      5,  4 ; $F0
-	map_const UNUSED_MAP_F1,                  0,  0 ; $F1
-	map_const UNUSED_MAP_F2,                  0,  0 ; $F2
-	map_const UNUSED_MAP_F3,                  0,  0 ; $F3
+	map_const VERMILION_FOREST_GATE,            4,  3 ; $F1
+	map_const CELADON_FOREST_GATE,              3,  4 ; $F2
+	map_const LAVENDER_FOREST_GATE,             3,  4 ; $F3
 	map_const UNUSED_MAP_F4,                  0,  0 ; $F4
 	map_const LORELEIS_ROOM,                  5,  6 ; $F5
 	map_const BRUNOS_ROOM,                    5,  6 ; $F6
@@ -401,7 +401,6 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const LAVENDER_FOREST,               20, 23 ; $F9
 	map_const CELADON_FOREST,                20, 23 ; $FA
 	map_const VERMILION_FOREST,              20, 23 ; $FB
-	map_const BILLS_LIGHTHOUSE,              30,  9 ; $FC
 DEF NUM_MAPS EQU const_value
 
 ; Indoor maps, such as houses, use this as the Map ID in their exit warps

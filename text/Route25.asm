@@ -154,8 +154,3 @@ _Route25BillSignText::
 	text "SEA COTTAGE"
 	line "BILL lives here!"
 	done
-
-_Route25BillsLighthouseSignText::
-	text "Bill's Light"
-	line "House"
-	done

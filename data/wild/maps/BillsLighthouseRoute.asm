@@ -1,4 +1,4 @@
-BillsLighthouseWildMons:
+BillsLighthouseRouteWildMons:
 	def_grass_wildmons 15 ; encounter rate
 	db 21, ABRA
 	db 21, CLEFAIRY

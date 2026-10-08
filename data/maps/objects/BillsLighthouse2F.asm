@@ -1,7 +1,7 @@
 	object_const_def
 
 BillsLighthouse2F_Object:
-	db 1 ; border block
+	db $f ; border block
 
 	def_warp_events
 	warp_event  6,  1, BILLS_LIGHTHOUSE_3F, 2

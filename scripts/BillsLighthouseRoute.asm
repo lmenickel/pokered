@@ -1,7 +1,7 @@
-BillsLighthouse_Script:
+BillsLighthouseRoute_Script:
 	jp EnableAutoTextBoxDrawing
 
-BillsLighthouse_TextPointers:
+BillsLighthouseRoute_TextPointers:
 	def_text_pointers
 
 	text_end ; unused

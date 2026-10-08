@@ -11,7 +11,7 @@ WildDataPointers:
 	dw NothingWildMons         ; CINNABAR_ISLAND
 	dw NothingWildMons         ; INDIGO_PLATEAU
 	dw NothingWildMons         ; SAFFRON_CITY
-	dw NothingWildMons         ; unused
+	dw BillsLighthouseRouteWildMons ; BILLS_LIGHTHOUSE_ROUTE
 	dw Route1WildMons          ; ROUTE_1
 	dw Route2WildMons          ; ROUTE_2
 	dw Route3WildMons          ; ROUTE_3
@@ -252,7 +252,6 @@ WildDataPointers:
 	dw LavenderForestWildMons  ; LAVENDER_FOREST
 	dw CeladonForestWildMons   ; CELADON_FOREST
 	dw VermilionForestWildMons ; VERMILION_FOREST
-	dw BillsLighthouseWildMons ; BILLS_LIGHTHOUSE
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 
@@ -330,7 +329,7 @@ INCLUDE "data/wild/maps/CeruleanForest.asm"
 INCLUDE "data/wild/maps/VermilionForest.asm"
 INCLUDE "data/wild/maps/LavenderForest.asm"
 INCLUDE "data/wild/maps/CeladonForest.asm"
-INCLUDE "data/wild/maps/BillsLighthouse.asm"
+INCLUDE "data/wild/maps/BillsLighthouseRoute.asm"
 INCLUDE "data/wild/maps/Cinn_vol_1F.asm"
 INCLUDE "data/wild/maps/Cinn_vol_TF.asm"
 INCLUDE "data/wild/maps/Cinn_vol_BF.asm"
