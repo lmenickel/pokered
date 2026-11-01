@@ -1302,3 +1302,13 @@ INCLUDE "data/maps/headers/Cinn_vol_BF.asm"
 INCLUDE "scripts/Cinn_vol_BF.asm"
 INCLUDE "data/maps/objects/Cinn_vol_BF.asm"
 Cinn_vol_BF_Blocks: INCBIN "maps/Cinn_vol_BF.blk"
+
+INCLUDE "data/maps/headers/DarkCave2.asm"
+INCLUDE "scripts/DarkCave2.asm"
+INCLUDE "data/maps/objects/DarkCave2.asm"
+DarkCave2_Blocks: INCBIN "maps/DarkCave2.blk"
+
+INCLUDE "data/maps/headers/Route26.asm"
+INCLUDE "scripts/Route26.asm"
+INCLUDE "data/maps/objects/Route26.asm"
+Route26_Blocks: INCBIN "maps/Route26.blk"

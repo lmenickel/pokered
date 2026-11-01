@@ -253,4 +253,6 @@ MapHeaderPointers::
 	dw LavenderForest_h
 	dw CeladonForest_h
 	dw VermilionForest_h
+	dw DarkCave2_h
+	dw Route26_h
 	assert_table_length NUM_MAPS

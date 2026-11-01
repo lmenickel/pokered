@@ -253,4 +253,6 @@ MapHeaderBanks::
 	db BANK(LavenderForest_h)
 	db BANK(CeladonForest_h)
 	db BANK(VermilionForest_h)
+	db BANK(DarkCave2_h)
+	db BANK(Route26_h)
 	assert_table_length NUM_MAPS

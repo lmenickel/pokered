@@ -252,6 +252,8 @@ WildDataPointers:
 	dw LavenderForestWildMons  ; LAVENDER_FOREST
 	dw CeladonForestWildMons   ; CELADON_FOREST
 	dw VermilionForestWildMons ; VERMILION_FOREST
+	dw NothingWildMons         ; DARK_CAVE_2
+	dw NothingWildMons         ; ROUTE_26
 	assert_table_length NUM_MAPS
 	dw -1 ; end
 

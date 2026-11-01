@@ -252,4 +252,6 @@ MapSongBanks::
 	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; LAVENDER_FOREST
 	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; CELADON_FOREST
 	db MUSIC_DUNGEON2, BANK(Music_Dungeon2) ; VERMILION_FOREST
+	db MUSIC_DUNGEON3, BANK(Music_Dungeon3) ; DARK_CAVE_2
+	db MUSIC_ROUTES3, BANK(Music_Routes3) ; ROUTE_26
 	assert_table_length NUM_MAPS
