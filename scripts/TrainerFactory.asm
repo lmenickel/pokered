@@ -61,9 +61,45 @@ TrainerFactorySansaText:
 
 TrainerFactoryProfOakText:
 	text_asm
+	call TrainerFactorySetOakTeamScript
 	ld hl, TrainerFactoryTrainerHeader4
 	call TalkToTrainer
 	jp TextScriptEnd
+
+; Prof. Oak uses the starter that neither the player nor the rival took.
+TrainerFactorySetOakTeamScript:
+	ld a, [wPlayerStarter]
+	ld b, a
+	ld a, [wRivalStarter]
+	ld c, a
+	ld hl, .OakTeamsByStarter
+.loop
+	ld a, [hli]
+	cp -1
+	jr z, .got_team ; no free starter (shouldn't happen): a = -1, use the first team
+	cp b
+	jr z, .next
+	cp c
+	jr nz, .found
+.next
+	inc hl
+	jr .loop
+.found
+	ld a, [hl]
+.got_team
+	cp -1
+	jr nz, .set_team
+	ld a, 1
+.set_team
+	ld [wMapSpriteExtraData + (TRAINERFACTORY_PROF_OAK - 1) * 2 + 1], a
+	ret
+
+.OakTeamsByStarter:
+	; starter, Prof. Oak's team in ProfOakData
+	db SQUIRTLE,   1 ; Blastoise
+	db BULBASAUR,  2 ; Venusaur
+	db CHARMANDER, 3 ; Charizard
+	db -1 ; end
 
 TrainerFactoryAryaBattleText:
 	text_far _TrainerFactoryAryaBattleText
