@@ -154,13 +154,13 @@ MonPartyData:
 	nybble ICON_QUADRUPED ; Espeon
 	nybble ICON_QUADRUPED ; Umbreon
 	nybble ICON_QUADRUPED ; Sylveon
-	nybble ICON_MON       ; Crobat
+	nybble ICON_BIRD      ; Crobat
 	nybble ICON_WATER     ; Marill
 	nybble ICON_WATER     ; Azumarill
 	nybble ICON_SNAKE     ; Steelix
-	nybble ICON_MON       ; Scizor
-	nybble ICON_MON       ; Heracross
-	nybble ICON_MON       ; Skarmory
+	nybble ICON_BUG       ; Scizor
+	nybble ICON_BUG       ; Heracross
+	nybble ICON_BIRD      ; Skarmory
 	nybble ICON_QUADRUPED ; Phanpy
 	nybble ICON_QUADRUPED ; Donphan
 	nybble ICON_MON       ; Sudowoodo
