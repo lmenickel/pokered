@@ -1312,3 +1312,43 @@ INCLUDE "data/maps/headers/Route26.asm"
 INCLUDE "scripts/Route26.asm"
 INCLUDE "data/maps/objects/Route26.asm"
 Route26_Blocks: INCBIN "maps/Route26.blk"
+
+INCLUDE "data/maps/headers/Route26House.asm"
+INCLUDE "scripts/Route26House.asm"
+INCLUDE "data/maps/objects/Route26House.asm"
+Route26House_Blocks: INCBIN "maps/Route26House.blk"
+
+INCLUDE "data/maps/headers/Route26RestHouse.asm"
+INCLUDE "scripts/Route26RestHouse.asm"
+INCLUDE "data/maps/objects/Route26RestHouse.asm"
+Route26RestHouse_Blocks: INCBIN "maps/Route26RestHouse.blk"
+
+INCLUDE "data/maps/headers/Route26WestHouse1F.asm"
+INCLUDE "scripts/Route26WestHouse1F.asm"
+INCLUDE "data/maps/objects/Route26WestHouse1F.asm"
+Route26WestHouse1F_Blocks: INCBIN "maps/Route26WestHouse1F.blk"
+
+INCLUDE "data/maps/headers/Route26WestHouse2F.asm"
+INCLUDE "scripts/Route26WestHouse2F.asm"
+INCLUDE "data/maps/objects/Route26WestHouse2F.asm"
+Route26WestHouse2F_Blocks: INCBIN "maps/Route26WestHouse2F.blk"
+
+INCLUDE "data/maps/headers/Route26EastHouse1F.asm"
+INCLUDE "scripts/Route26EastHouse1F.asm"
+INCLUDE "data/maps/objects/Route26EastHouse1F.asm"
+Route26EastHouse1F_Blocks: INCBIN "maps/Route26EastHouse1F.blk"
+
+INCLUDE "data/maps/headers/Route26EastHouse2F.asm"
+INCLUDE "scripts/Route26EastHouse2F.asm"
+INCLUDE "data/maps/objects/Route26EastHouse2F.asm"
+Route26EastHouse2F_Blocks: INCBIN "maps/Route26EastHouse2F.blk"
+
+INCLUDE "data/maps/headers/TrainerFactory.asm"
+INCLUDE "scripts/TrainerFactory.asm"
+INCLUDE "data/maps/objects/TrainerFactory.asm"
+TrainerFactory_Blocks: INCBIN "maps/TrainerFactory.blk"
+
+INCLUDE "data/maps/headers/Route26Pokecenter.asm"
+INCLUDE "scripts/Route26Pokecenter.asm"
+INCLUDE "data/maps/objects/Route26Pokecenter.asm"
+Route26Pokecenter_Blocks: INCBIN "maps/Route26Pokecenter.blk"

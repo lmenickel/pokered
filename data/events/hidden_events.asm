@@ -74,6 +74,8 @@ HiddenEventMaps:
 	hidden_event_map MR_FUJIS_HOUSE
 	hidden_event_map CELADON_MANSION_ROOF_HOUSE
 	hidden_event_map FIGHTING_DOJO
+	hidden_event_map TRAINER_FACTORY
+	hidden_event_map ROUTE_26_POKECENTER
 	hidden_event_map ROUTE_10
 	hidden_event_map INDIGO_PLATEAU_LOBBY
 	hidden_event_map CINNABAR_LAB_FOSSIL_ROOM
@@ -523,6 +525,15 @@ DEF ANY_FACING EQU $d0
 	hidden_event  6,  9, PrintFightingDojoText, SPRITE_FACING_UP
 	hidden_event  4,  0, PrintFightingDojoText2, SPRITE_FACING_UP
 	hidden_event  5,  0, PrintFightingDojoText3, SPRITE_FACING_UP
+	db -1 ; end
+
+	hidden_events_for ROUTE_26_POKECENTER
+	hidden_event 13,  3, OpenPokemonCenterPC, SPRITE_FACING_UP
+	db -1 ; end
+
+	hidden_events_for TRAINER_FACTORY
+	hidden_event  3,  9, PrintTrainerFactoryStatueText, SPRITE_FACING_UP
+	hidden_event  6,  9, PrintTrainerFactoryStatueText, SPRITE_FACING_UP
 	db -1 ; end
 
 	hidden_events_for INDIGO_PLATEAU_LOBBY

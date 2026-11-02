@@ -106,19 +106,19 @@ MapHeaderPointers::
 	dw SSAnne1FRooms_h
 	dw SSAnne2FRooms_h
 	dw SSAnneB1FRooms_h
-	dw LancesRoom_h ; UNUSED_MAP_69
-	dw LancesRoom_h ; UNUSED_MAP_6A
-	dw LancesRoom_h ; UNUSED_MAP_6B
+	dw Route26RestHouse_h
+	dw Route26WestHouse1F_h
+	dw Route26WestHouse2F_h
 	dw VictoryRoad1F_h
 	dw BillsLighthouse1F_h ; BILLS_LIGHTHOUSE_1F
 	dw BillsLighthouse2F_h ; BILLS_LIGHTHOUSE_2F
 	dw BillsLighthouse3F_h ; BILLS_LIGHTHOUSE_3F
 	dw BillsLighthouse4F_h ; BILLS_LIGHTHOUSE_4F
 	dw LancesRoom_h
-	dw LancesRoom_h ; UNUSED_MAP_72
-	dw LancesRoom_h ; UNUSED_MAP_73
-	dw LancesRoom_h ; UNUSED_MAP_74
-	dw LancesRoom_h ; UNUSED_MAP_75
+	dw Route26EastHouse1F_h
+	dw Route26EastHouse2F_h
+	dw TrainerFactory_h
+	dw Route26Pokecenter_h
 	dw HallOfFame_h
 	dw UndergroundPathNorthSouth_h
 	dw ChampionsRoom_h
@@ -232,7 +232,7 @@ MapHeaderPointers::
 	dw CeruleanCave1F_h
 	dw NameRatersHouse_h
 	dw CeruleanBadgeHouse_h
-	dw Route16Gate1F_h ; UNUSED_MAP_E7
+	dw Route26House_h
 	dw RockTunnelB1F_h
 	dw SilphCo9F_h
 	dw SilphCo10F_h

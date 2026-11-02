@@ -61,10 +61,10 @@ ToggleableObjectStates:
 	toggle_object_state CERULEANCITY_GUARD2,      ON
 
 	toggleable_objects_for SAFFRON_CITY
-	toggle_object_state SAFFRONCITY_ROCKET1,        ON
+	toggle_object_state SAFFRONCITY_ROCKET1,        OFF ; removed: blocked the Copycat house door
 	toggle_object_state SAFFRONCITY_ROCKET2,        ON
-	toggle_object_state SAFFRONCITY_ROCKET3,        ON
-	toggle_object_state SAFFRONCITY_ROCKET4,        ON
+	toggle_object_state SAFFRONCITY_ROCKET3,        OFF ; removed: blocked the Gym door
+	toggle_object_state SAFFRONCITY_ROCKET4,        OFF ; removed: blocked the Pidgey house door
 	toggle_object_state SAFFRONCITY_ROCKET5,        ON
 	toggle_object_state SAFFRONCITY_ROCKET6,        ON
 	toggle_object_state SAFFRONCITY_ROCKET7,        ON

@@ -106,19 +106,19 @@ MapHeaderBanks::
 	db BANK(SSAnne1FRooms_h)
 	db BANK(SSAnne2FRooms_h)
 	db BANK(SSAnneB1FRooms_h)
-	db $1D ; UNUSED_MAP_69
-	db $1D ; UNUSED_MAP_6A
-	db $1D ; UNUSED_MAP_6B
+	db BANK(Route26RestHouse_h)
+	db BANK(Route26WestHouse1F_h)
+	db BANK(Route26WestHouse2F_h)
 	db BANK(VictoryRoad1F_h)
 	db BANK(BillsLighthouse1F_h) ; BILLS_LIGHTHOUSE_1F
 	db BANK(BillsLighthouse2F_h) ; BILLS_LIGHTHOUSE_2F
 	db BANK(BillsLighthouse3F_h) ; BILLS_LIGHTHOUSE_3F
 	db BANK(BillsLighthouse4F_h) ; BILLS_LIGHTHOUSE_4F
 	db BANK(LancesRoom_h)
-	db $1D ; UNUSED_MAP_72
-	db $1D ; UNUSED_MAP_73
-	db $1D ; UNUSED_MAP_74
-	db $1D ; UNUSED_MAP_75
+	db BANK(Route26EastHouse1F_h)
+	db BANK(Route26EastHouse2F_h)
+	db BANK(TrainerFactory_h)
+	db BANK(Route26Pokecenter_h)
 	db BANK(HallOfFame_h)
 	db BANK(UndergroundPathNorthSouth_h)
 	db BANK(ChampionsRoom_h)
@@ -232,7 +232,7 @@ MapHeaderBanks::
 	db BANK(CeruleanCave1F_h)
 	db BANK(NameRatersHouse_h)
 	db BANK(CeruleanBadgeHouse_h)
-	db $01 ; UNUSED_MAP_E7
+	db BANK(Route26House_h)
 	db BANK(RockTunnelB1F_h)
 	db BANK(SilphCo9F_h)
 	db BANK(SilphCo10F_h)

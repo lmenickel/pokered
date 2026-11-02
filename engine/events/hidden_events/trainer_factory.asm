@@ -1,0 +1,7 @@
+PrintTrainerFactoryStatueText:
+	call EnableAutoTextBoxDrawing
+	tx_pre_jump TrainerFactoryStatueText
+
+TrainerFactoryStatueText::
+	text_far _TrainerFactoryStatueText
+	text_end

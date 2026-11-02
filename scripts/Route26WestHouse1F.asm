@@ -1,0 +1,28 @@
+Route26WestHouse1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route26WestHouse1F_TextPointers:
+	def_text_pointers
+	dw_const Route26WestHouse1FMomText, TEXT_ROUTE26WESTHOUSE1F_MOM
+	dw_const Route26WestHouse1FDadText, TEXT_ROUTE26WESTHOUSE1F_DAD
+	dw_const Route26WestHouse1FClefableText, TEXT_ROUTE26WESTHOUSE1F_CLEFABLE
+	dw_const Route26WestHouse1FTVText, TEXT_ROUTE26WESTHOUSE1F_TV
+
+Route26WestHouse1FMomText:
+	text_far _Route26WestHouse1FMomText
+	text_end
+
+Route26WestHouse1FDadText:
+	text_far _Route26WestHouse1FDadText
+	text_end
+
+Route26WestHouse1FClefableText:
+	text_far _Route26WestHouse1FClefableText
+	text_asm
+	ld a, CLEFABLE
+	call PlayCry
+	jp TextScriptEnd
+
+Route26WestHouse1FTVText:
+	text_far _Route26WestHouse1FTVText
+	text_end

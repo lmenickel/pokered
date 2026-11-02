@@ -37,12 +37,14 @@ TryDoWildEncounter:
 	jr z, .CanEncounter
 ; even if not in grass/water, standing anywhere we can encounter pokemon
 ; so long as the map is "indoor" and has wild pokemon defined.
-; ...as long as it's not Viridian Forest or Safari Zone.
+; ...as long as it's not Viridian Forest, Safari Zone, or an outdoor-tileset map.
 	ld a, [wCurMap]
 	cp FIRST_INDOOR_MAP ; is this an indoor map?
 	jr c, .CantEncounter2
 	ld a, [wCurMapTileset]
 	cp FOREST ; Viridian Forest/Safari Zone
+	jr z, .CantEncounter2
+	and a ; OVERWORLD tileset on an "indoor" map ID, e.g. Route 26
 	jr z, .CantEncounter2
 	ld a, [wGrassRate]
 .CanEncounter

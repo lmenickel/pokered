@@ -1,0 +1,28 @@
+Route26EastHouse1F_Script:
+	jp EnableAutoTextBoxDrawing
+
+Route26EastHouse1F_TextPointers:
+	def_text_pointers
+	dw_const Route26EastHouse1FMomText, TEXT_ROUTE26EASTHOUSE1F_MOM
+	dw_const Route26EastHouse1FDadText, TEXT_ROUTE26EASTHOUSE1F_DAD
+	dw_const Route26EastHouse1FWigglytuffText, TEXT_ROUTE26EASTHOUSE1F_WIGGLYTUFF
+	dw_const Route26EastHouse1FTVText, TEXT_ROUTE26EASTHOUSE1F_TV
+
+Route26EastHouse1FMomText:
+	text_far _Route26EastHouse1FMomText
+	text_end
+
+Route26EastHouse1FDadText:
+	text_far _Route26EastHouse1FDadText
+	text_end
+
+Route26EastHouse1FWigglytuffText:
+	text_far _Route26EastHouse1FWigglytuffText
+	text_asm
+	ld a, WIGGLYTUFF
+	call PlayCry
+	jp TextScriptEnd
+
+Route26EastHouse1FTVText:
+	text_far _Route26EastHouse1FTVText
+	text_end

@@ -772,6 +772,30 @@ DEF INDIGO_PLATEAU_EVENTS_END EQU const_value - 1
 	const_skip 8
 	const EVENT_BEAT_ARTICUNO
 
+; Dark Cave 2 events
+	const_next $9E0
+	const_skip
+	const EVENT_BEAT_DARK_CAVE_2_TRAINER_0
+	const EVENT_BEAT_DARK_CAVE_2_TRAINER_1
+	const EVENT_BEAT_DARK_CAVE_2_TRAINER_2
+	const EVENT_BEAT_DARK_CAVE_2_TRAINER_3
+
+; Route 26 events
+	const_next $9F0
+	const_skip
+	const EVENT_BEAT_ROUTE_26_TRAINER_0
+	const EVENT_BEAT_ROUTE_26_TRAINER_1
+	const EVENT_BEAT_ROUTE_26_TRAINER_2
+
+; Trainer Factory events
+	const_next $9F8
+	const_skip
+	const EVENT_BEAT_TRAINER_FACTORY_TRAINER_0
+	const EVENT_BEAT_TRAINER_FACTORY_TRAINER_1
+	const EVENT_BEAT_TRAINER_FACTORY_TRAINER_2
+	const EVENT_BEAT_TRAINER_FACTORY_TRAINER_3
+	const EVENT_BEAT_TRAINER_FACTORY_PROF_OAK
+
 ; End of events
 	const_next $A00
 DEF NUM_EVENTS EQU const_value

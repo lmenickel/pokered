@@ -267,6 +267,16 @@ SECTION "Text 11", ROMX
 
 INCLUDE "data/text/text_7.asm"
 INCLUDE "text/BillsLighthouse4F.asm"
+INCLUDE "text/DarkCave2.asm"
+INCLUDE "text/Route26.asm"
+INCLUDE "text/Route26House.asm"
+INCLUDE "text/Route26RestHouse.asm"
+INCLUDE "text/Route26WestHouse1F.asm"
+INCLUDE "text/Route26WestHouse2F.asm"
+INCLUDE "text/Route26EastHouse1F.asm"
+INCLUDE "text/Route26EastHouse2F.asm"
+INCLUDE "text/TrainerFactory.asm"
+INCLUDE "text/Route26Pokecenter.asm"
 
 
 SECTION "Pokédex Text", ROMX

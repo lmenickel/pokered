@@ -1,0 +1,24 @@
+	object_const_def
+	const_export TRAINERFACTORY_PROF_OAK
+	const_export TRAINERFACTORY_ARYA
+	const_export TRAINERFACTORY_BRAN
+	const_export TRAINERFACTORY_ROBB
+	const_export TRAINERFACTORY_SANSA
+
+TrainerFactory_Object:
+	db $3 ; border block
+
+	def_warp_events
+	warp_event  4, 11, ROUTE_26, 6
+	warp_event  5, 11, ROUTE_26, 6
+
+	def_bg_events
+
+	def_object_events
+	object_event  5,  3, SPRITE_OAK, STAY, DOWN, TEXT_TRAINERFACTORY_PROF_OAK, OPP_PROF_OAK, 1
+	object_event  3,  4, SPRITE_COOLTRAINER_F, STAY, RIGHT, TEXT_TRAINERFACTORY_ARYA, OPP_COOLTRAINER_F, 9
+	object_event  3,  6, SPRITE_COOLTRAINER_M, STAY, RIGHT, TEXT_TRAINERFACTORY_BRAN, OPP_COOLTRAINER_M, 12
+	object_event  5,  5, SPRITE_COOLTRAINER_M, STAY, LEFT, TEXT_TRAINERFACTORY_ROBB, OPP_COOLTRAINER_M, 11
+	object_event  5,  7, SPRITE_COOLTRAINER_F, STAY, LEFT, TEXT_TRAINERFACTORY_SANSA, OPP_COOLTRAINER_F, 10
+
+	def_warps_to TRAINER_FACTORY

@@ -213,6 +213,8 @@ PokemaniacData:
 	db 40, CHARMELEON, LAPRAS, LICKITUNG, 0
 ; Rock Tunnel 1F
 	db 23, CUBONE, SLOWPOKE, 0
+; Dark Cave 2
+	db $FF, 30, MARILL, 30, MARILL, 30, MARILL, 35, AZUMARILL, 0
 
 SuperNerdData:
 ; Mt. Moon 1F
@@ -232,6 +234,9 @@ SuperNerdData:
 	db 34, PONYTA, CHARMANDER, VULPIX, GROWLITHE, 0
 	db 41, RAPIDASH, 0
 	db 37, GROWLITHE, VULPIX, 0
+; Dark Cave 2
+	db 30, PINSIR, HERACROSS, 0
+	db 32, ESPEON, UMBREON, 0
 
 HikerData:
 ; Mt. Moon 1F
@@ -255,6 +260,10 @@ HikerData:
 	db 19, GEODUDE, MACHOP, GEODUDE, GEODUDE, 0
 	db 20, ONIX, ONIX, GEODUDE, 0
 	db 21, GEODUDE, GRAVELER, 0
+; Dark Cave 2
+	db 32, SUDOWOODO, STEELIX, DONPHAN, 0
+; Route 26
+	db 43, SANDSLASH, STEELIX, 0
 
 BikerData:
 ; Route 13
@@ -330,6 +339,8 @@ FisherData:
 	db 33, SEAKING, GOLDEEN, 0
 ; Route 12
 	db 24, MAGIKARP, MAGIKARP, 0
+; Route 26
+	db 45, CLOYSTER, TENTACRUEL, 0
 
 SwimmerData:
 ; Cerulean Gym
@@ -469,6 +480,8 @@ BirdKeeperData:
 	db 26, PIDGEY, SPEAROW, PIDGEY, FEAROW, 0
 	db 29, PIDGEOTTO, FEAROW, 0
 	db 28, SPEAROW, DODUO, FEAROW, 0
+; Route 26
+	db 42, SKARMORY, PIDGEOT, FEAROW, 0
 
 BlackbeltData:
 ; Fighting Dojo
@@ -498,8 +511,9 @@ Rival1Data:
 	db $FF, 18, PIDGEOTTO, 15, ABRA, 15, RATTATA, 17, CHARMANDER, 0
 
 ProfOakData:
-; Unused
+; Trainer Factory
 	db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, BLASTOISE, 70, GYARADOS, 0
+; Unused
 	db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, VENUSAUR, 70, GYARADOS, 0
 	db $FF, 66, TAUROS, 67, EXEGGUTOR, 68, ARCANINE, 69, CHARIZARD, 70, GYARADOS, 0
 
@@ -621,6 +635,9 @@ CooltrainerMData:
 ; Viridian Gym
 	db 39, SANDSLASH, DUGTRIO, 0
 	db 43, RHYHORN, 0
+; Trainer Factory
+	db 60, ARCANINE, UMBREON, HERACROSS, 0
+	db 60, ARCANINE, ESPEON, FEAROW, 0
 
 CooltrainerFData:
 ; Celadon Gym
@@ -636,6 +653,9 @@ CooltrainerFData:
 	db 45, IVYSAUR, VENUSAUR, 0
 	db 45, NIDORINA, NIDOQUEEN, 0
 	db 43, PERSIAN, NINETALES, RAICHU, 0
+; Trainer Factory
+	db 60, ARCANINE, JOLTEON, ARBOK, 0
+	db 60, ARCANINE, VAPOREON, CLEFABLE, 0
 
 BrunoData:
 	db $FF, 53, POLIWRATH, 55, HITMONCHAN, 55, HITMONLEE, 56, PRIMEAPE, 58, MACHAMP, 0

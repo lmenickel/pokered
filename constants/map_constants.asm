@@ -174,9 +174,9 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const SS_ANNE_B1F_ROOMS,             12,  8 ; $68
 	end_indoor_group SS_ANNE
 
-	map_const UNUSED_MAP_69,                  0,  0 ; $69
-	map_const UNUSED_MAP_6A,                  0,  0 ; $6A
-	map_const UNUSED_MAP_6B,                  0,  0 ; $6B
+	map_const ROUTE_26_REST_HOUSE,            4,  4 ; $69
+	map_const ROUTE_26_WEST_HOUSE_1F,         4,  4 ; $6A
+	map_const ROUTE_26_WEST_HOUSE_2F,         4,  4 ; $6B
 	map_const VICTORY_ROAD_1F,               10,  9 ; $6C
 	end_indoor_group VICTORY_ROAD
 
@@ -185,10 +185,10 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const BILLS_LIGHTHOUSE_3F,             4,  6 ; $6F
 	map_const BILLS_LIGHTHOUSE_4F,             4,  6 ; $70
 	map_const LANCES_ROOM,                   13, 13 ; $71
-	map_const UNUSED_MAP_72,                  0,  0 ; $72
-	map_const UNUSED_MAP_73,                  0,  0 ; $73
-	map_const UNUSED_MAP_74,                  0,  0 ; $74
-	map_const UNUSED_MAP_75,                  0,  0 ; $75
+	map_const ROUTE_26_EAST_HOUSE_1F,         4,  4 ; $72
+	map_const ROUTE_26_EAST_HOUSE_2F,         4,  4 ; $73
+	map_const TRAINER_FACTORY,                5,  6 ; $74
+	map_const ROUTE_26_POKECENTER,            7,  4 ; $75
 	map_const HALL_OF_FAME,                   5,  4 ; $76
 	end_indoor_group POKEMON_LEAGUE
 
@@ -374,7 +374,7 @@ DEF FIRST_INDOOR_MAP EQU const_value
 	map_const CERULEAN_BADGE_HOUSE,           4,  4 ; $E6
 	end_indoor_group CERULEAN_CITY_3
 
-	map_const UNUSED_MAP_E7,                  0,  0 ; $E7
+	map_const ROUTE_26_HOUSE,                 4,  4 ; $E7
 	map_const ROCK_TUNNEL_B1F,               20, 18 ; $E8
 	end_indoor_group ROCK_TUNNEL_2
 
